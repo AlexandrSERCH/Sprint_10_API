@@ -1,0 +1,20 @@
+[project]
+name = "Sprint_10_Api"
+version = "0.1.0"
+requires-python = ">=3.12"
+dependencies = [
+    "requests==2.33.1",
+    "pydantic==2.12.5",
+    "pydantic_settings==2.13.1",
+    "faker==40.12.0",
+    "pytest==9.0.2",
+    "pytest-xdist==3.8.0",
+    "allure-pytest==2.15.3",
+    "allure-python-commons==2.15.3",
+    "assertpy==1.1",
+]
+
+[tool.pytest.ini_options]
+disable_test_id_escaping_and_forfeit_all_rights_to_community_support = true
+addopts = "-n auto --alluredir=allure_result"
+testpaths = ["tests"]
