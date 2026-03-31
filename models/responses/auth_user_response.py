@@ -7,6 +7,8 @@ class UserItem(BaseModel):
     id: int
     name: str
     email: str
+    avatar: str | None
+    admin: bool
 
 
 class AccessTokenItem(BaseModel):
@@ -15,15 +17,8 @@ class AccessTokenItem(BaseModel):
     access_token: str
 
 
-class RegisterUserResponse(BaseModel):
+class AuthUserResponse(BaseModel):
     model_config = ConfigDict(extra="forbid")
 
     user: UserItem
-    access_token: AccessTokenItem
-
-
-class RegisterUserResponseError(BaseModel):
-    model_config = ConfigDict(extra="forbid")
-
-    statusCode: int
-    message: str
+    token: AccessTokenItem
