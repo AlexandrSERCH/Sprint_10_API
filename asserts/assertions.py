@@ -1,4 +1,5 @@
 from http import HTTPStatus
+from typing import Any
 
 import allure
 import requests
@@ -12,7 +13,7 @@ def assert_status_code(response: requests.Response, expected_status_code: HTTPSt
         ).is_equal_to(expected_status_code)
 
 
-def assert_field(*, actual: str, expected: str, field_name: str) -> None:
+def assert_field(*, actual: Any, expected: Any, field_name: str) -> None:
     with allure.step(f"Проверить поле: '{field_name}'. Ожидается: '{expected}'"):
         assert_that(actual).described_as(
             f"Ожидался: '{expected}', получено: '{actual}'"
