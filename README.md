@@ -38,9 +38,5 @@ source .venv/Scripts/activate
 ### 4. Установить зависимости
 
 ```bash
-pip install ".[dev]"
+pip install .
 ```
-
-Устанавливает всё: pytest, allure, requests, pydantic, faker, ruff.
-
----
