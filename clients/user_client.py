@@ -16,7 +16,7 @@ from models.responses.register_user_response import (
 
 class UserClient:
     def __init__(self, base_client: BaseClient) -> None:
-        self.base_client = base_client
+        self._base_client = base_client
 
     @allure.title("Зарегистровать пользователя")
     def register_user(
@@ -26,7 +26,7 @@ class UserClient:
         expected_status_code: HTTPStatus = HTTPStatus.CREATED,
     ) -> RegisterUserResponse | RegisterUserResponseError:
 
-        response = self.base_client.request(
+        response = self._base_client.request(
             HTTPMethod.POST,
             UserEndpoints.REGISTER,
             json_body=payload.model_dump(),
@@ -50,7 +50,7 @@ class UserClient:
         expected_status_code: HTTPStatus = HTTPStatus.CREATED,
     ) -> AuthUserResponse:
 
-        response = self.base_client.request(
+        response = self._base_client.request(
             HTTPMethod.POST,
             UserEndpoints.AUTH,
             json_body=payload.model_dump(),

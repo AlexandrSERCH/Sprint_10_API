@@ -14,7 +14,6 @@ from helpers.build_curl import build_curl
 
 class HttpClient:
     DEFAULT_HEADERS: dict[str, str] = {
-        "Content-Type": "application/json",
         "Accept": "application/json",
     }
 
@@ -51,12 +50,20 @@ class HttpClient:
         method: HTTPMethod,
         *,
         json_body: dict[str, Any] | None = None,
+        form_data: dict[str, Any] | None = None,
+        files: list[tuple] | None = None,
         params: dict[str, Any] | None = None,
         token: str | None = None,
     ) -> requests.Response:
 
+        if form_data:
+            files = files or []
+            for key, value in form_data.items():
+                files.append((key, (None, str(value))))
+            form_data = None
+
         url = base_url + endpoint
-        headers = self._build_headers(token)
+        headers = self._build_headers(token, is_multipart=bool(form_data or files))
         curl = build_curl(method, url, headers, json_body)
 
         with allure.step(f"{method}: '{endpoint}'"):
@@ -67,6 +74,8 @@ class HttpClient:
                 method=method,
                 url=url,
                 json=json_body,
+                data=form_data,
+                files=files,
                 params=params,
                 headers=headers,
                 timeout=self.timeout,
@@ -77,8 +86,10 @@ class HttpClient:
 
         return response
 
-    def _build_headers(self, token: str | None) -> dict[str, str]:
+    def _build_headers(self, token: str | None, is_multipart: bool = False) -> dict[str, str]:
         headers = dict(self.session.headers)
+        if not is_multipart:
+            headers["Content-Type"] = "application/json"
         if token:
-            headers["Authorization"] = token
+            headers["Authorization"] = f"Bearer {token}"
         return headers

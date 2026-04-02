@@ -19,6 +19,8 @@ class BaseClient:
         endpoint: str,
         *,
         json_body: dict[str, Any] | None = None,
+        form_data: dict[str, Any] | None = None,
+        files: list[tuple] | None = None,
         params: dict[str, Any] | None = None,
         token: str | None = None,
     ) -> requests.Response:
@@ -28,6 +30,8 @@ class BaseClient:
             endpoint=endpoint,
             method=method,
             json_body=json_body,
+            form_data=form_data,
+            files=files,
             params=params,
             token=token,
         )

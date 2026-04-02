@@ -18,6 +18,22 @@ dependencies = [
 disable_test_id_escaping_and_forfeit_all_rights_to_community_support = true
 addopts = "-n auto --alluredir=allure_result"
 testpaths = ["tests"]
+markers = [
+    # severity
+    "blocker: блокирующий",
+    "critical: критический",
+    "normal: нормальный",
+    "minor: незначительный",
+    "trivial: тривиальный",
+    # tags
+    "API: API тесты",
+    "smoke: дымовые тесты",
+    "users: тесты юзеров", #
+    "regress: регрессионные тесты",
+    "auth: тесты авторизации",
+    "register: тесты регистрации",
+    "listing: тесты объявлений",
+]
 
 [tool.setuptools]
 packages = []

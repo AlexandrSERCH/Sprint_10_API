@@ -4,11 +4,15 @@ import allure
 
 from asserts.assertions import assert_field
 from models.requests.register_user_payload import RegisterUserPayload
+from utils.markers import tag, severity, Level
 
 
 @allure.epic("Пользователь")
 @allure.feature("Регистрация пользователя")
 class TestRegisterUser:
+
+    @severity(Level.BLOCKER)
+    @tag("API","regress", "users", "register")
     @allure.title("Успешная регистрация пользователя")
     def test_success_register_user(self, user_client, faker):
         password = faker.password(length=8, special_chars=False)
@@ -18,6 +22,8 @@ class TestRegisterUser:
 
         assert_field(actual=result.user.email, expected=payload.email, field_name="email")
 
+    @severity(Level.NORMAL)
+    @tag("API","regress", "users", "register")
     @allure.title("Ошибка валидации при попытке зарегистрировать уже существующего пользователя")
     def test_register_exist_user_return_error(self, user_client, registered_user):
         payload = RegisterUserPayload(
