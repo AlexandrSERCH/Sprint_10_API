@@ -5,3 +5,4 @@ class UserEndpoints:
 
 class ListingEndpoints:
     CREATE = "/api/create-listing"
+    EDIT = "/api/update-offer/"

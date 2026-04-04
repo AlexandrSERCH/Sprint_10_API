@@ -18,7 +18,7 @@ class UserClient:
     def __init__(self, base_client: BaseClient) -> None:
         self._base_client = base_client
 
-    @allure.title("Зарегистровать пользователя")
+    @allure.title("Зарегистрировать пользователя")
     def register_user(
         self,
         payload: RegisterUserPayload,

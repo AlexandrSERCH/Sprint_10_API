@@ -16,7 +16,7 @@ class ListingCondition(str, Enum):
     USED = "Б/У"
 
 
-class CreateListingPayload(BaseModel):
+class ListingPayload(BaseModel):
     name: str
     category: ListingCategory
     condition: ListingCondition

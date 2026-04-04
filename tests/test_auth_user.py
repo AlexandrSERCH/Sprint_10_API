@@ -1,6 +1,6 @@
 import allure
 
-from asserts.assertions import assert_field
+from asserts.assertions import assert_field_equals
 from models.requests.auth_user_payload import AuthUserPayload
 from utils.markers import tag, severity, Level
 
@@ -17,4 +17,4 @@ class TestAuthUser:
 
         result = user_client.auth_user(payload)
 
-        assert_field(actual=result.user.email, expected=registered_user.email, field_name="email")
+        assert_field_equals(actual=result.user.email, expected=registered_user.email, field_name="email")

@@ -3,7 +3,7 @@ from datetime import datetime
 from pydantic import BaseModel, ConfigDict
 
 
-class CreateListingResponse(BaseModel):
+class ListingResponse(BaseModel):
     model_config = ConfigDict(extra="forbid")
 
     id: int
@@ -20,3 +20,11 @@ class CreateListingResponse(BaseModel):
     updatedAt: datetime
     createdAt: datetime
     isFavorite: bool | None
+
+
+class ListingResponseError(BaseModel):
+    model_config = ConfigDict(extra="forbid")
+
+    message: str
+    error: str
+    statusCode: int

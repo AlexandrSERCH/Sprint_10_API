@@ -2,7 +2,7 @@ from http import HTTPStatus
 
 import allure
 
-from asserts.assertions import assert_field
+from asserts.assertions import assert_field_equals
 from models.requests.register_user_payload import RegisterUserPayload
 from utils.markers import tag, severity, Level
 
@@ -20,7 +20,7 @@ class TestRegisterUser:
 
         result = user_client.register_user(payload)
 
-        assert_field(actual=result.user.email, expected=payload.email, field_name="email")
+        assert_field_equals(actual=result.user.email, expected=payload.email, field_name="email")
 
     @severity(Level.NORMAL)
     @tag("API","regress", "users", "register")
@@ -34,4 +34,4 @@ class TestRegisterUser:
 
         result = user_client.register_user(payload, expected_status_code=HTTPStatus.BAD_REQUEST)
 
-        assert_field(actual=result.message, expected="Почта уже используется", field_name="message")
+        assert_field_equals(actual=result.message, expected="Почта уже используется", field_name="message")

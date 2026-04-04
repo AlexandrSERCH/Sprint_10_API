@@ -1,3 +1,4 @@
+from enum import Enum
 from http import HTTPStatus
 from typing import Any
 
@@ -15,9 +16,17 @@ def assert_status_code(response: requests.Response, expected_status_code: HTTPSt
         ).is_equal_to(expected_status_code)
 
 
-def assert_field(*, actual: Any, expected: Any, field_name: str) -> None:
-    with allure.step(f"Проверить поле: '{field_name}'. Ожидаемый результат: '{expected}'"):
+def assert_field_equals(*, actual: Any, expected: Any, field_name: str) -> None:
+    display = expected.value if isinstance(expected, Enum) else expected
+    with allure.step(f"Проверить поле: '{field_name}'. Ожидаемый результат: '{display}'"):
         assert_that(actual).described_as(
             f"Ожидаемый результат: '{expected}', "
             f"Фактический результат: '{actual}'"
         ).is_equal_to(expected)
+
+def assert_field_contains(*, actual: Any, expected: Any, field_name: str) -> None:
+    with allure.step(f"Проверить поле: '{field_name}'. В поле должно содержаться: '{expected}'"):
+        assert_that(actual).described_as(
+            f"Ожидаемый результат: '{expected}', "
+            f"Фактический результат: '{actual}'"
+        ).contains(expected)
