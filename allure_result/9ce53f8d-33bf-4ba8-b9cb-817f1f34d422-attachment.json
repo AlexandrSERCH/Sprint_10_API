@@ -1,0 +1,12 @@
+{
+  "user": {
+    "id": 40703,
+    "name": "User",
+    "email": "varvara_71@example.com",
+    "avatar": null,
+    "admin": false
+  },
+  "token": {
+    "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NDA3MDMsImVtYWlsIjoidmFydmFyYV83MUBleGFtcGxlLmNvbSIsIm5hbWUiOiJVc2VyIiwiaWF0IjoxNzc1NDA2MDUzLCJleHAiOjE3NzU0OTI0NTN9.i6fz_qqUzlYL6OyUIdIN4w3X3zT7jE-mCt_Hc682XTs"
+  }
+}

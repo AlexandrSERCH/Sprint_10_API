@@ -1,0 +1,11 @@
+{
+  "Access-Control-Allow-Origin": "*",
+  "Content-Type": "application/json; charset=utf-8",
+  "Set-Cookie": "_yasc=kf9hU+afGyjc7M89lFmF6bDJaismnXeAIbGgbM2mbHwqUd4YnjC9uerS+s0n3A==; domain=.praktikum-services.ru; path=/; expires=Wed, 02 Apr 2036 16:20:50 GMT; secure",
+  "Content-Length": "311",
+  "X-Request-Id": "1775406050099378-17512759946917753863",
+  "X-Powered-By": "Express",
+  "ETag": "W/\"137-fPuqA8w+MIUJ+8E8ZeKkW8AmU4s\"",
+  "Date": "Sun, 05 Apr 2026 16:20:52 GMT",
+  "Strict-Transport-Security": "max-age=31536000; preload"
+}

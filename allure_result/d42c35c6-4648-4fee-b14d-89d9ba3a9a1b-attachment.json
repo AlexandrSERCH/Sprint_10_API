@@ -1,0 +1,16 @@
+{
+  "id": 23570,
+  "name": "Название объявления",
+  "category": "Авто",
+  "condition": "Новый",
+  "city": "Москва",
+  "description": "Описание объявления",
+  "price": 500,
+  "img1": "https://qa-foodgram.s3.yandex.net/undefined",
+  "img2": "https://qa-foodgram.s3.yandex.net/undefined",
+  "owner": 40704,
+  "updatedAt": "2026-04-05T16:20:54.238Z",
+  "createdAt": "2026-04-05T16:20:54.238Z",
+  "img3": null,
+  "isFavorite": null
+}

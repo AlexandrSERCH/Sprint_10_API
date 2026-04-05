@@ -1,0 +1,7 @@
+curl --location --request POST 'https://qa-desk.stand.praktikum-services.ru/api/signup' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "email": "longin28@example.net",
+    "password": "kp5lkJPd",
+    "submitPassword": "kp5lkJPd"
+}'

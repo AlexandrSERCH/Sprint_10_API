@@ -1,0 +1,16 @@
+{
+  "id": 23567,
+  "price": 1000,
+  "name": "Измененное название объявления",
+  "category": "Книги",
+  "condition": "Б/У",
+  "city": "Воронеж",
+  "description": "Измененное описание",
+  "img1": "https://qa-foodgram.s3.yandex.net/undefined",
+  "img2": "https://qa-foodgram.s3.yandex.net/undefined",
+  "img3": "https://qa-foodgram.s3.yandex.net/undefined",
+  "isFavorite": null,
+  "owner": 40700,
+  "createdAt": "2026-04-05T16:20:53.554Z",
+  "updatedAt": "2026-04-05T16:20:54.047Z"
+}

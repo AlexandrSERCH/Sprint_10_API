@@ -1,0 +1,10 @@
+{
+  "user": {
+    "id": 40706,
+    "name": "User",
+    "email": "melnikovamarina@example.com"
+  },
+  "access_token": {
+    "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NDA3MDYsImVtYWlsIjoibWVsbmlrb3ZhbWFyaW5hQGV4YW1wbGUuY29tIiwibmFtZSI6IlVzZXIiLCJpYXQiOjE3NzU0MDYwNTQsImV4cCI6MTc3NTQ5MjQ1NH0.lmfJJrIuNStT3xhV8AU8Q5nzMOO_pDbya4qxzHYJJHI"
+  }
+}

@@ -1,0 +1,56 @@
+[project]
+name = "Sprint_10_Api"
+version = "0.1.0"
+requires-python = ">=3.12"
+dependencies = [
+    "requests==2.33.1",
+    "pydantic==2.12.5",
+    "pydantic_settings==2.13.1",
+    "faker==40.12.0",
+    "pytest==9.0.2",
+    "pytest-xdist==3.8.0",
+    "allure-pytest==2.15.3",
+    "allure-python-commons==2.15.3",
+    "assertpy==1.1",
+    "ruff==0.11.2",
+]
+
+[tool.pytest.ini_options]
+disable_test_id_escaping_and_forfeit_all_rights_to_community_support = true
+addopts = "-n auto --alluredir=allure_result"
+testpaths = ["tests"]
+markers = [
+    # severity
+    "blocker: блокирующий",
+    "critical: критический",
+    "normal: нормальный",
+    "minor: незначительный",
+    "trivial: тривиальный",
+    # tags
+    "API: API тесты",
+    "smoke: дымовые тесты",
+    "users: тесты юзеров",
+    "regress: регрессионные тесты",
+    "auth: тесты авторизации",
+    "register: тесты регистрации",
+    "listing: тесты объявлений",
+]
+
+[tool.setuptools]
+packages = []
+
+[tool.ruff]
+line-length = 120
+
+[tool.ruff.lint]
+select = [
+    "E", # pycodestyle errors
+    "W", # pycodestyle warnings
+    "F", # pyflakes (неиспользуемые импорты, переменные)
+    "I", # isort
+]
+
+[tool.pyright]
+reportMissingTypeStubs = false
+reportUnknownMemberType = "none"
+reportUnknownVariableType = "none"
