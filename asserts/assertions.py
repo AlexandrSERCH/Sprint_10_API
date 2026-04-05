@@ -24,6 +24,7 @@ def assert_field_equals(*, actual: Any, expected: Any, field_name: str) -> None:
             f"Фактический результат: '{actual}'"
         ).is_equal_to(expected)
 
+
 def assert_field_contains(*, actual: Any, expected: Any, field_name: str) -> None:
     with allure.step(f"Проверить поле: '{field_name}'. В поле должно содержаться: '{expected}'"):
         assert_that(actual).described_as(

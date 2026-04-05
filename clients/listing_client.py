@@ -6,6 +6,7 @@ import allure
 from asserts.assertions import assert_status_code
 from clients.base_client import BaseClient
 from clients.endpoints import ListingEndpoints
+from helpers.multipart import open_images
 from models.requests.listing_payload import ListingPayload
 from models.responses.listing_response import (
     ListingResponse,
@@ -27,14 +28,7 @@ class ListingClient:
         expected_status_code: HTTPStatus = HTTPStatus.CREATED,
     ) -> ListingResponse:
 
-        file_handles = []
-        files = None
-
-        try:
-            if images:
-                file_handles = [open(img, "rb") for img in images]
-                files = [("images", fh) for fh in file_handles]
-
+        with open_images(images) as files:
             response = self._base_client.request(
                 HTTPMethod.POST,
                 ListingEndpoints.CREATE,
@@ -42,9 +36,6 @@ class ListingClient:
                 files=files,
                 token=token,
             )
-        finally:
-            for fh in file_handles:
-                fh.close()
 
         assert_status_code(response, expected_status_code)
 
@@ -60,24 +51,14 @@ class ListingClient:
         expected_status_code: HTTPStatus = HTTPStatus.OK,
     ) -> ListingResponse | ListingResponseError:
 
-        file_handles = []
-        files = None
-
-        try:
-            if images:
-                file_handles = [open(img, "rb") for img in images]
-                files = [("images", fh) for fh in file_handles]
-
+        with open_images(images) as files:
             response = self._base_client.request(
                 HTTPMethod.PATCH,
-                ListingEndpoints.EDIT + id_listing,
+                ListingEndpoints.EDIT.format(id=id_listing),
                 form_data=form_data.model_dump(mode="json", exclude_none=True),
                 files=files,
                 token=token,
             )
-        finally:
-            for fh in file_handles:
-                fh.close()
 
         assert_status_code(response, expected_status_code)
 
@@ -99,7 +80,7 @@ class ListingClient:
 
         response = self._base_client.request(
             HTTPMethod.DELETE,
-            ListingEndpoints.DELETE + id_listing,
+            ListingEndpoints.DELETE.format(id=id_listing),
             token=token,
         )
 

@@ -41,7 +41,7 @@ class TestEditListing:
                 assert_field_equals(actual=result.city, expected=payload.city, field_name="city")
                 assert_field_equals(actual=result.description, expected=payload.description, field_name="description")
                 assert_field_equals(actual=result.price, expected=payload.price, field_name="price")
-                assert_field_contains(actual=result.img2, expected="s3", field_name="img3")
+                assert_field_contains(actual=result.img3, expected="s3", field_name="img3")
 
     @severity(Level.NORMAL)
     @tag("API", "regress", "smoke", "listing")

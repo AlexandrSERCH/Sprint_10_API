@@ -1,9 +1,11 @@
+import dataclasses
 from collections import namedtuple
 
 import allure
 import pytest
 from faker import Faker
 
+from dataclasses import dataclass
 from clients.base_client import BaseClient
 from clients.http_client import HttpClient
 from clients.listing_client import ListingClient
@@ -17,6 +19,11 @@ from models.requests.listing_payload import (
 )
 from models.requests.register_user_payload import RegisterUserPayload
 
+@dataclass
+class User:
+    email: str
+    password: str
+
 
 @pytest.fixture
 def faker() -> Faker:
@@ -29,8 +36,8 @@ def http_client():
 
 
 @pytest.fixture(scope="session")
-def base_client():
-    return BaseClient()
+def base_client(http_client):
+    return BaseClient(http_client)
 
 
 @pytest.fixture(scope="session")
@@ -50,9 +57,7 @@ def registered_user(user_client, faker):
     payload = RegisterUserPayload(email=faker.email(), password=password, submitPassword=password)
     response = user_client.register_user(payload)
 
-    ExistUser = namedtuple("ExistUser", ["email", "password"])
-
-    return ExistUser(email=response.user.email, password=password)
+    return User(email=response.user.email, password=password)
 
 
 @allure.title("Зарегистрировать пользователя под другой УЗ")
@@ -62,9 +67,7 @@ def registered_another_user(user_client, faker):
     payload = RegisterUserPayload(email=faker.email(), password=password, submitPassword=password)
     response = user_client.register_user(payload)
 
-    ExistUser = namedtuple("ExistUser", ["email", "password"])
-
-    return ExistUser(email=response.user.email, password=password)
+    return User(email=response.user.email, password=password)
 
 
 @allure.title("Авторизовать пользователя")

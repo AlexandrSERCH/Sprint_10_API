@@ -8,9 +8,9 @@ from config import get_settings
 
 
 class BaseClient:
-    def __init__(self) -> None:
+    def __init__(self, http_client: HttpClient) -> None:
         settings = get_settings()
-        self.http = HttpClient()
+        self.http = http_client
         self.BASE_URL: str = settings.BASE_URL
 
     def request(

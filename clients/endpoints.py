@@ -5,5 +5,5 @@ class UserEndpoints:
 
 class ListingEndpoints:
     CREATE = "/api/create-listing"
-    EDIT = "/api/update-offer/"
-    DELETE = "/api/listings/"
+    EDIT = "/api/update-offer/{id}"
+    DELETE = "/api/listings/{id}"
