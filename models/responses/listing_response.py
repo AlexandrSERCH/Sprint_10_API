@@ -28,3 +28,9 @@ class ListingResponseError(BaseModel):
     message: str
     error: str
     statusCode: int
+
+
+class ListingDeleteResponse(BaseModel):
+    model_config = ConfigDict(extra="forbid")
+
+    message: str

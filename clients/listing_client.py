@@ -7,7 +7,11 @@ from asserts.assertions import assert_status_code
 from clients.base_client import BaseClient
 from clients.endpoints import ListingEndpoints
 from models.requests.listing_payload import ListingPayload
-from models.responses.listing_response import ListingResponse, ListingResponseError
+from models.responses.listing_response import (
+    ListingResponse,
+    ListingResponseError,
+    ListingDeleteResponse,
+)
 
 
 class ListingClient:
@@ -84,3 +88,21 @@ class ListingClient:
         raise ValueError(
             f"В клиенте отсутствует обработчик для статус-кода: '{response.status_code}'"
         )
+
+    @allure.title("Удалить объявление")
+    def delete_listing(
+        self,
+        id_listing: str,
+        token: str,
+        expected_status_code: HTTPStatus = HTTPStatus.OK,
+    ) -> ListingDeleteResponse:
+
+        response = self._base_client.request(
+            HTTPMethod.DELETE,
+            ListingEndpoints.DELETE + id_listing,
+            token=token,
+        )
+
+        assert_status_code(response, expected_status_code)
+
+        return ListingDeleteResponse.model_validate(response.json())
