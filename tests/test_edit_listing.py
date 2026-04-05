@@ -3,10 +3,10 @@ from http import HTTPStatus
 import allure
 from assertpy import soft_assertions
 
-from asserts.assertions import assert_field_equals, assert_field_contains
+from asserts.assertions import assert_field_contains, assert_field_equals
 from data.listing import LISTING_IMAGE_1, LISTING_IMAGE_2, LISTING_IMAGE_3
-from models.requests.listing_payload import ListingPayload, ListingCategory, ListingCondition
-from utils.markers import severity, Level, tag
+from models.requests.listing_payload import ListingCategory, ListingCondition, ListingPayload
+from utils.markers import Level, severity, tag
 
 
 @allure.epic("Объявления")

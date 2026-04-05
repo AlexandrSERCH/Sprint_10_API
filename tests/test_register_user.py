@@ -4,7 +4,7 @@ import allure
 
 from asserts.assertions import assert_field_equals
 from models.requests.register_user_payload import RegisterUserPayload
-from utils.markers import tag, severity, Level
+from utils.markers import Level, severity, tag
 
 
 @allure.epic("Пользователь")

@@ -2,7 +2,7 @@ import allure
 
 from asserts.assertions import assert_field_equals
 from models.requests.auth_user_payload import AuthUserPayload
-from utils.markers import tag, severity, Level
+from utils.markers import Level, severity, tag
 
 
 @allure.epic("Пользователь")

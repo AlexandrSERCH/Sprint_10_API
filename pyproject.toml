@@ -12,6 +12,7 @@ dependencies = [
     "allure-pytest==2.15.3",
     "allure-python-commons==2.15.3",
     "assertpy==1.1",
+    "ruff==0.11.2",
 ]
 
 [tool.pytest.ini_options]
@@ -37,3 +38,19 @@ markers = [
 
 [tool.setuptools]
 packages = []
+
+[tool.ruff]
+line-length = 120
+
+[tool.ruff.lint]
+select = [
+    "E", # pycodestyle errors
+    "W", # pycodestyle warnings
+    "F", # pyflakes (неиспользуемые импорты, переменные)
+    "I", # isort
+]
+
+[tool.pyright]
+reportMissingTypeStubs = false
+reportUnknownMemberType = "none"
+reportUnknownVariableType = "none"

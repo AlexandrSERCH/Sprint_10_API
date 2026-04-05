@@ -17,6 +17,7 @@ dist/
 # Allure
 allure-results/
 allure-report/
+allure_result/
 
 # Ruff
 .ruff_cache/

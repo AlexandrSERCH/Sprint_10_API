@@ -1,7 +1,7 @@
 import allure
 
 from asserts.assertions import assert_field_equals
-from utils.markers import severity, Level, tag
+from utils.markers import Level, severity, tag
 
 
 @allure.epic("Объявления")
