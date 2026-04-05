@@ -1,0 +1,16 @@
+{
+  "id": 23569,
+  "name": "правый",
+  "category": "Книги",
+  "condition": "Б/У",
+  "city": "г. Сорочинск",
+  "description": "Доставать прелесть функция жидкий. Ответить подробность материя прелесть.",
+  "price": 24188,
+  "img1": "https://qa-foodgram.s3.yandex.net/undefined",
+  "img2": "https://qa-foodgram.s3.yandex.net/undefined",
+  "owner": 40699,
+  "updatedAt": "2026-04-05T16:20:53.639Z",
+  "createdAt": "2026-04-05T16:20:53.639Z",
+  "img3": null,
+  "isFavorite": null
+}

@@ -1,0 +1,2 @@
+curl --location --request POST 'https://qa-desk.stand.praktikum-services.ru/api/create-listing' \
+--header 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NDA3MDQsImVtYWlsIjoiYmVsb3Zhbm9ubmFAZXhhbXBsZS5vcmciLCJuYW1lIjoiVXNlciIsImlhdCI6MTc3NTQwNjA1MywiZXhwIjoxNzc1NDkyNDUzfQ.vVbkNCNzyu9Z2bTp7ksxaAOkna6ZIZYtFeK8rLpUQbE'

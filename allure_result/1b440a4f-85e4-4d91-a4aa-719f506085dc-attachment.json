@@ -1,0 +1,12 @@
+{
+  "user": {
+    "id": 40704,
+    "name": "User",
+    "email": "belovanonna@example.org",
+    "avatar": null,
+    "admin": false
+  },
+  "token": {
+    "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NDA3MDQsImVtYWlsIjoiYmVsb3Zhbm9ubmFAZXhhbXBsZS5vcmciLCJuYW1lIjoiVXNlciIsImlhdCI6MTc3NTQwNjA1MywiZXhwIjoxNzc1NDkyNDUzfQ.vVbkNCNzyu9Z2bTp7ksxaAOkna6ZIZYtFeK8rLpUQbE"
+  }
+}

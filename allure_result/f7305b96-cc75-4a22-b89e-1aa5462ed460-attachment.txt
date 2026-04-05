@@ -1,0 +1,2 @@
+curl --location --request PATCH 'https://qa-desk.stand.praktikum-services.ru/api/update-offer/23567' \
+--header 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NDA3MDAsImVtYWlsIjoibG9uZ2luMjhAZXhhbXBsZS5uZXQiLCJuYW1lIjoiVXNlciIsImlhdCI6MTc3NTQwNjA1MiwiZXhwIjoxNzc1NDkyNDUyfQ.oSS2kRmhEJn7ynmBa5yt1a76GOqBHdeDIokEZfTagPE'

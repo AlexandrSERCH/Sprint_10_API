@@ -1,0 +1,10 @@
+{
+  "user": {
+    "id": 40699,
+    "name": "User",
+    "email": "guljaevapelageja@example.org"
+  },
+  "access_token": {
+    "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NDA2OTksImVtYWlsIjoiZ3VsamFldmFwZWxhZ2VqYUBleGFtcGxlLm9yZyIsIm5hbWUiOiJVc2VyIiwiaWF0IjoxNzc1NDA2MDUwLCJleHAiOjE3NzU0OTI0NTB9.NetXss70ttDZkIkzDm-Ia5v1ejBw7xG89027q57ZXv8"
+  }
+}

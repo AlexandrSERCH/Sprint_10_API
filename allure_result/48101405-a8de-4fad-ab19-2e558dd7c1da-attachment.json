@@ -1,0 +1,12 @@
+{
+  "user": {
+    "id": 40702,
+    "name": "User",
+    "email": "veronikazhuravleva@example.org",
+    "avatar": null,
+    "admin": false
+  },
+  "token": {
+    "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NDA3MDIsImVtYWlsIjoidmVyb25pa2F6aHVyYXZsZXZhQGV4YW1wbGUub3JnIiwibmFtZSI6IlVzZXIiLCJpYXQiOjE3NzU0MDYwNTIsImV4cCI6MTc3NTQ5MjQ1Mn0.p9a6sFdXZ1w0Keh0k_9Tp6Tc7qrRWNL70R7a1CbYZts"
+  }
+}

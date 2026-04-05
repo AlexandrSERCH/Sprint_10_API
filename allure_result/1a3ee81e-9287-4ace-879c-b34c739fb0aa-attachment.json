@@ -1,0 +1,7 @@
+{
+  "User-Agent": "python-requests/2.33.1",
+  "Accept-Encoding": "gzip, deflate",
+  "Accept": "application/json",
+  "Connection": "keep-alive",
+  "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NDA3MDAsImVtYWlsIjoibG9uZ2luMjhAZXhhbXBsZS5uZXQiLCJuYW1lIjoiVXNlciIsImlhdCI6MTc3NTQwNjA1MiwiZXhwIjoxNzc1NDkyNDUyfQ.oSS2kRmhEJn7ynmBa5yt1a76GOqBHdeDIokEZfTagPE"
+}

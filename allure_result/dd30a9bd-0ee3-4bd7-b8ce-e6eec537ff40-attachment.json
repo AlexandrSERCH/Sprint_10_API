@@ -1,0 +1,10 @@
+{
+  "user": {
+    "id": 40705,
+    "name": "User",
+    "email": "akulina1974@example.net"
+  },
+  "access_token": {
+    "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NDA3MDUsImVtYWlsIjoiYWt1bGluYTE5NzRAZXhhbXBsZS5uZXQiLCJuYW1lIjoiVXNlciIsImlhdCI6MTc3NTQwNjA1NCwiZXhwIjoxNzc1NDkyNDU0fQ.kJvhHIkwC602gHkO8FCPFOmbf5MXWNfaLWOFukZInXE"
+  }
+}

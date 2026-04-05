@@ -1,0 +1,10 @@
+{
+  "X-Powered-By": "Express",
+  "X-Request-Id": "1775406054138546-7766386444267021030",
+  "Strict-Transport-Security": "max-age=31536000; preload",
+  "Access-Control-Allow-Origin": "*",
+  "Date": "Sun, 05 Apr 2026 16:20:54 GMT",
+  "ETag": "W/\"49-+HGKB7kttdZx7ju4eFiFviXmt/Y\"",
+  "Content-Length": "73",
+  "Content-Type": "application/json; charset=utf-8"
+}
